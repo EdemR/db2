@@ -13,7 +13,6 @@ public class RadioCharts {
         this.pw = pw;
     }
 
-
     public String getMostPlayedSong() {
         String query = "SELECT artist, song, SUM(times_aired) AS count FROM music_broadcast GROUP BY artist ORDER BY count DESC LIMIT 1";
 
@@ -27,6 +26,7 @@ public class RadioCharts {
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
+
         return "";
     }
 
@@ -43,6 +43,7 @@ public class RadioCharts {
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
+        
         return "";
     }
 }
